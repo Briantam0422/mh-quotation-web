@@ -37,7 +37,7 @@ export default function Home() {
           <Col order={0} sm={24} md={24} lg={24} xl={12} className="p-20">
             <div
               className="p-5 sm:p-5 md:p-5 lg:p-5 xl:p-10"
-              style={{ maxHeight: '85vh', overflow: 'auto' }}
+              // style={{ maxHeight: '85vh', overflow: 'auto' }}
             >
               <ToolPanel />
             </div>

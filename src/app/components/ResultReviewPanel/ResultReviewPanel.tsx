@@ -105,7 +105,10 @@ const ResultReviewPanel = () => {
           </Button>
         </Flex>
       </Col>
-      <Col span={24} style={{ maxHeight: '70vh', overflow: 'auto' }}>
+      <Col
+        span={24}
+        // style={{ maxHeight: '70vh', overflow: 'auto' }}
+      >
         <Card title="報價結果預覽" style={{ minHeight: '70vh' }}>
           {checkIsEmpty() && <p>請選擇您的需求</p>}
           {!checkIsEmpty() && (
