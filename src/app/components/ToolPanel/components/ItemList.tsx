@@ -1,0 +1,62 @@
+import Card from 'antd/es/card/Card';
+import Checkbox from 'antd/es/checkbox/Checkbox';
+import { useFormikContext } from 'formik';
+import { Col, Row } from 'antd';
+import { Option } from './Options';
+import { FormValues } from '@/app/page';
+import { OptionType } from '@/app/enum/common';
+
+interface ItemListProps {
+  items: Option[];
+  field: string;
+  currentValue: Option[];
+  type: 'multiple' | 'single';
+}
+const ItemList = (props: ItemListProps) => {
+  const { items, currentValue, field, type } = props;
+  const { values, setFieldValue } = useFormikContext<FormValues>();
+
+  return (
+    <Row gutter={[10, 10]}>
+      {items.map((item) => {
+        return (
+          <Col key={item.id} span={12}>
+            <Card
+              variant="borderless"
+              onClick={() => {
+                if (type === OptionType.SINGLE) {
+                  setFieldValue(field, []);
+                  setFieldValue(field, [item]);
+                }
+
+                if (type === OptionType.MULTIPLE) {
+                  if (currentValue.length === 0) {
+                    setFieldValue(field, [item]);
+                  } else {
+                    if (currentValue.some((currentValueItem) => currentValueItem.id === item.id)) {
+                      setFieldValue(
+                        field,
+                        currentValue.filter((currentValueItem) => currentValueItem.id !== item.id),
+                      );
+                    } else {
+                      setFieldValue(field, [...currentValue, item]);
+                    }
+                  }
+                }
+              }}
+            >
+              <Checkbox
+                key={item.id}
+                checked={currentValue.some((currentValueItem) => currentValueItem.id === item.id)}
+              >
+                <p className="w-full">{item.name}</p>
+              </Checkbox>
+            </Card>
+          </Col>
+        );
+      })}
+    </Row>
+  );
+};
+
+export default ItemList;
