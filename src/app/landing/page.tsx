@@ -47,7 +47,7 @@ export default function App() {
             backgroundRepeat: 'no-repeat',
           }}
         >
-          <div className="p-20" style={{ height: '100%' }}>
+          <div className="p-5 sm:p-5 md:p-5 lg:p-5 xl:p-10" style={{ height: '100%' }}>
             <Row gutter={[16, 16]} justify="center" align="middle" style={{ height: '100%' }}>
               <Col span={24}>
                 <Card variant="borderless">
@@ -88,7 +88,13 @@ export default function App() {
             </Row>
           </div>
         </Col>
-        <Col sm={24} md={24} lg={24} xl={12} className="p-10">
+        <Col
+          sm={24}
+          md={24}
+          lg={24}
+          xl={12}
+          className="hidden p-5 sm:block sm:p-5 md:p-5 lg:p-5 xl:p-10"
+        >
           <PhotoGrid />
         </Col>
       </Row>

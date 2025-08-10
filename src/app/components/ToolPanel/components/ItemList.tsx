@@ -20,7 +20,7 @@ const ItemList = (props: ItemListProps) => {
     <Row gutter={[10, 10]}>
       {items.map((item) => {
         return (
-          <Col key={item.id} span={12}>
+          <Col key={item.id} span={24} lg={12} md={12} sm={12} xs={24}>
             <Card
               variant="borderless"
               onClick={() => {
