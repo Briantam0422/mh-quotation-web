@@ -1,4 +1,3 @@
-import Flex from 'antd/es/flex';
 import Col from 'antd/es/grid/col';
 import Row from 'antd/es/grid/row';
 import { Option } from '../../ToolPanel/components/Options';
@@ -12,7 +11,7 @@ interface SingleItemProps {
 const SingleItem = (props: SingleItemProps) => {
   const { title, currentValue } = props;
 
-  const [styles, api] = useSpring(
+  const [styles] = useSpring(
     () => ({
       from: { opacity: 0 },
       to: { opacity: 1 },

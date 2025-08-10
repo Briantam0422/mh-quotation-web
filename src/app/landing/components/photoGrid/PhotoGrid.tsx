@@ -10,10 +10,6 @@ import data from './data';
 import styles from './styles.module.css';
 
 function Masonry() {
-  if (typeof window === 'undefined') {
-    return <div>Loading123...</div>;
-  }
-
   // Hook1: Tie media queries to the number of columns
   const columns = useMedia(
     ['(min-width: 2500px)', '(min-width: 2000px)', '(min-width: 1500px)'],
@@ -31,8 +27,8 @@ function Masonry() {
   }, []);
   // Hook5: Form a grid of stacked items using width & columns we got from hooks 1 & 2
   const [heights, gridItems] = useMemo(() => {
-    let heights = new Array(columns).fill(0); // Each column gets a height starting with zero
-    let gridItems = items.map((child, i) => {
+    const heights = new Array(columns).fill(0); // Each column gets a height starting with zero
+    const gridItems = items.map((child, i) => {
       const column = heights.indexOf(Math.min(...heights)); // Basic masonry-grid placing, puts tile into the smallest column using Math.min
       const x = (width / columns) * column; // x = container width / number of columns * column index,
       const y = (heights[column] += child.height / 2) - child.height / 2; // y = it's just the height of the current column

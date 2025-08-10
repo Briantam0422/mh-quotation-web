@@ -1,4 +1,3 @@
-import { FormValues, initialValues } from '@/app/page';
 import Card from 'antd/es/card/Card';
 import Col from 'antd/es/col';
 import Row from 'antd/es/grid/row';
@@ -10,16 +9,13 @@ import { useRouter } from 'next/navigation';
 import { questions } from '../ToolPanel/Config/config';
 import { ValueType } from '@/app/enum/form';
 import { priceItems } from '../ToolPanel/Config/priceItem';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import { FormValues, initialValues } from '@/app/interface/form';
 
 const ResultReviewPanel = () => {
   const [finalPrice, setFinalPrice] = useState(0);
   const router = useRouter();
   const { values, setValues } = useFormikContext<FormValues>();
-
-  useEffect(() => {
-    calcualtePrice();
-  }, [values]);
 
   const checkIsEmpty = () => {
     let isEmpty = true;
@@ -36,7 +32,7 @@ const ResultReviewPanel = () => {
     return values[ValueType.sizeOptions].length != 0;
   };
 
-  const checkIsNeededResetFinalPrice = () => {
+  const checkIsNeededResetFinalPrice = useCallback(() => {
     let isNeededReset = true;
     Object.keys(values).some((key) => {
       if (key != ValueType.sizeOptions && values[key as keyof FormValues].length != 0) {
@@ -44,13 +40,13 @@ const ResultReviewPanel = () => {
       }
     });
     return isNeededReset;
-  };
+  }, [values]);
 
   const reset = () => {
     setValues(initialValues);
   };
 
-  const calcualtePrice = () => {
+  const calcualtePrice = useCallback(() => {
     if (checkIsNeededResetFinalPrice()) {
       setFinalPrice(0);
       return;
@@ -80,7 +76,11 @@ const ResultReviewPanel = () => {
       });
     });
     console.log(finalPrice);
-  };
+  }, [values]);
+
+  useEffect(() => {
+    calcualtePrice();
+  }, [values, calcualtePrice]);
 
   return (
     <Row gutter={[16, 20]}>

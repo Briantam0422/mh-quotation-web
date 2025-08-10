@@ -3,8 +3,8 @@ import { useFormikContext } from 'formik';
 import Row from 'antd/es/grid/row';
 import Col from 'antd/es/grid/col';
 import Options from './components/Options';
-import { FormValues } from '@/app/page';
 import { questions } from './Config/config';
+import { FormValues } from '@/app/interface/form';
 
 const ToolPanel = () => {
   const { values } = useFormikContext<FormValues>();

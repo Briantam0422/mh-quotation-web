@@ -3,8 +3,8 @@ import Checkbox from 'antd/es/checkbox/Checkbox';
 import { useFormikContext } from 'formik';
 import { Col, Row } from 'antd';
 import { Option } from './Options';
-import { FormValues } from '@/app/page';
 import { OptionType } from '@/app/enum/common';
+import { FormValues } from '@/app/interface/form';
 
 interface ItemListProps {
   items: Option[];
@@ -14,7 +14,7 @@ interface ItemListProps {
 }
 const ItemList = (props: ItemListProps) => {
   const { items, currentValue, field, type } = props;
-  const { values, setFieldValue } = useFormikContext<FormValues>();
+  const { setFieldValue } = useFormikContext<FormValues>();
 
   return (
     <Row gutter={[10, 10]}>

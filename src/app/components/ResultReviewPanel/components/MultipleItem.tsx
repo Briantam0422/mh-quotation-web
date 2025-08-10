@@ -6,14 +6,13 @@ import { animated, useSpring } from '@react-spring/web';
 
 interface MutipleItemProps {
   title: string;
-  options: Option[];
   currentValue: Option[];
 }
 
 const MultipleItem = (props: MutipleItemProps) => {
-  const { title, options, currentValue } = props;
+  const { title, currentValue } = props;
 
-  const [styles, api] = useSpring(
+  const [styles] = useSpring(
     () => ({
       from: { opacity: 0 },
       to: { opacity: 1 },
