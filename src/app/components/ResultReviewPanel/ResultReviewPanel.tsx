@@ -11,6 +11,7 @@ import { ValueType } from '@/app/enum/form';
 import { priceItems } from '../ToolPanel/Config/priceItem';
 import { useCallback, useEffect, useState } from 'react';
 import { FormValues, initialValues } from '@/app/interface/form';
+import { calculateRoundPrice, formatPrice } from '@/app/util/pricing';
 
 const ResultReviewPanel = () => {
   const [finalPrice, setFinalPrice] = useState(0);
@@ -78,6 +79,12 @@ const ResultReviewPanel = () => {
     console.log(finalPrice);
   }, [values]);
 
+  const getFinalPrice = useCallback(() => {
+    const minFinalPrice = formatPrice(calculateRoundPrice(finalPrice, 1 - 0.05));
+    const maxFinalPrice = formatPrice(calculateRoundPrice(finalPrice, 1 + 0.05));
+    return `$${minFinalPrice} - $${maxFinalPrice}`;
+  }, [finalPrice]);
+
   useEffect(() => {
     calcualtePrice();
   }, [values, calcualtePrice]);
@@ -143,9 +150,7 @@ const ResultReviewPanel = () => {
               <p className="text-2xl font-bold font-stretch-110%">$0</p>
             )}
             {!checkIsEmpty() && finalPrice !== 0 && checkIsSizeSelected() && (
-              <p className="text-2xl font-bold font-stretch-110%">
-                ${Math.round(finalPrice * (1 - 0.05))} - ${Math.round(finalPrice * (1 + 0.05))}
-              </p>
+              <p className="text-2xl font-bold font-stretch-110%">{getFinalPrice()}</p>
             )}
           </Flex>
         </Card>

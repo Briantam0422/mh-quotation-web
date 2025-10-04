@@ -20,7 +20,7 @@ export default function Home() {
             lg={24}
             xl={12}
             style={{
-              backgroundImage: 'url(/Love.jpeg)',
+              backgroundImage: 'url(/A08.jpg)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
