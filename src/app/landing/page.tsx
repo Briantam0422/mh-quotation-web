@@ -41,7 +41,7 @@ export default function App() {
           lg={24}
           xl={12}
           style={{
-            backgroundImage: 'url(/A05.jpg)',
+            backgroundImage: 'url(/A05-min.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
