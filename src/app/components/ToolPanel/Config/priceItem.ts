@@ -1,8 +1,11 @@
 export const priceTypeEnum = {
     ONE_ROOM: "ONE_ROOM",
+    TWO_ROOM_ONE_BATHROOM_SMALL: "TWO_ROOM_ONE_BATHROOM_SMALL",
     TWO_ROOM_ONE_BATHROOM: "TWO_ROOM_ONE_BATHROOM",
     THREE_ROOM_ONE_BATHROOM: "THREE_ROOM_ONE_BATHROOM",
     THREE_ROOM_TWO_BATHROOM: "THREE_ROOM_TWO_BATHROOM",
+    THREE_ROOM_TWO_BATHROOM_LARGE: "THREE_ROOM_TWO_BATHROOM_LARGE",
+    FOUR_ROOM_TWO_BATHROOM: "FOUR_ROOM_TWO_BATHROOM",
     CLEAN_FURNITURE: "CLEAN_FURNITURE",
     CEMENT: "CEMENT",
     PAINT: "PAINT",
@@ -26,144 +29,192 @@ export const priceItems = [
       type: priceTypeEnum.CLEAN_FURNITURE,
       prices: {
         [priceTypeEnum.ONE_ROOM]: 38000,
+        [priceTypeEnum.TWO_ROOM_ONE_BATHROOM_SMALL]: 41500,
         [priceTypeEnum.TWO_ROOM_ONE_BATHROOM]: 45000,
         [priceTypeEnum.THREE_ROOM_ONE_BATHROOM]: 58000,
         [priceTypeEnum.THREE_ROOM_TWO_BATHROOM]: 63000,
+        [priceTypeEnum.THREE_ROOM_TWO_BATHROOM_LARGE]: 77500,
+        [priceTypeEnum.FOUR_ROOM_TWO_BATHROOM]: 96900,
       }
     },
     {
         type: priceTypeEnum.CEMENT,
         prices: {
             [priceTypeEnum.ONE_ROOM]: 81000,
+            [priceTypeEnum.TWO_ROOM_ONE_BATHROOM_SMALL]: 94000,
             [priceTypeEnum.TWO_ROOM_ONE_BATHROOM]: 107000,
             [priceTypeEnum.THREE_ROOM_ONE_BATHROOM]: 136000,
             [priceTypeEnum.THREE_ROOM_TWO_BATHROOM]: 171000,
-        }   
+            [priceTypeEnum.THREE_ROOM_TWO_BATHROOM_LARGE]: 210500,
+            [priceTypeEnum.FOUR_ROOM_TWO_BATHROOM]: 263100,
+        }
     },
     {
         type: priceTypeEnum.PAINT,
         prices: {
             [priceTypeEnum.ONE_ROOM]: 37000,
+            [priceTypeEnum.TWO_ROOM_ONE_BATHROOM_SMALL]: 43500,
             [priceTypeEnum.TWO_ROOM_ONE_BATHROOM]: 50000,
             [priceTypeEnum.THREE_ROOM_ONE_BATHROOM]: 71000,
             [priceTypeEnum.THREE_ROOM_TWO_BATHROOM]: 71000,
+            [priceTypeEnum.THREE_ROOM_TWO_BATHROOM_LARGE]: 87400,
+            [priceTypeEnum.FOUR_ROOM_TWO_BATHROOM]: 109300,
         }
     },
     {
         type: priceTypeEnum.FALSE_CEILING,
         prices: {
             [priceTypeEnum.ONE_ROOM]: 6000,
+            [priceTypeEnum.TWO_ROOM_ONE_BATHROOM_SMALL]: 7000,
             [priceTypeEnum.TWO_ROOM_ONE_BATHROOM]: 8000,
             [priceTypeEnum.THREE_ROOM_ONE_BATHROOM]: 13000,
             [priceTypeEnum.THREE_ROOM_TWO_BATHROOM]: 13000,
+            [priceTypeEnum.THREE_ROOM_TWO_BATHROOM_LARGE]: 16000,
+            [priceTypeEnum.FOUR_ROOM_TWO_BATHROOM]: 20000,
         }
     },
     {
         type: priceTypeEnum.WOOD_DOOR,
         prices: {
             [priceTypeEnum.ONE_ROOM]: 35000,
+            [priceTypeEnum.TWO_ROOM_ONE_BATHROOM_SMALL]: 43000,
             [priceTypeEnum.TWO_ROOM_ONE_BATHROOM]: 43000,
             [priceTypeEnum.THREE_ROOM_ONE_BATHROOM]: 51000,
             [priceTypeEnum.THREE_ROOM_TWO_BATHROOM]: 59000,
+            [priceTypeEnum.THREE_ROOM_TWO_BATHROOM_LARGE]: 59000,
+            [priceTypeEnum.FOUR_ROOM_TWO_BATHROOM]: 73800,
         }
     },
     {
         type: priceTypeEnum.BASE_BOARD,
         prices: {
             [priceTypeEnum.ONE_ROOM]: 5000,
+            [priceTypeEnum.TWO_ROOM_ONE_BATHROOM_SMALL]: 5500,
             [priceTypeEnum.TWO_ROOM_ONE_BATHROOM]: 6000,
             [priceTypeEnum.THREE_ROOM_ONE_BATHROOM]: 9000,
             [priceTypeEnum.THREE_ROOM_TWO_BATHROOM]: 9000,
+            [priceTypeEnum.THREE_ROOM_TWO_BATHROOM_LARGE]: 11100,
+            [priceTypeEnum.FOUR_ROOM_TWO_BATHROOM]: 13900,
         }
     },
     {
         type: priceTypeEnum.CLEANING_INSTALLATION,
         prices: {
             [priceTypeEnum.ONE_ROOM]: 10000,
+            [priceTypeEnum.TWO_ROOM_ONE_BATHROOM_SMALL]: 15000,
             [priceTypeEnum.TWO_ROOM_ONE_BATHROOM]: 15000,
             [priceTypeEnum.THREE_ROOM_ONE_BATHROOM]: 15000,
             [priceTypeEnum.THREE_ROOM_TWO_BATHROOM]: 28000,
+            [priceTypeEnum.THREE_ROOM_TWO_BATHROOM_LARGE]: 34500,
+            [priceTypeEnum.FOUR_ROOM_TWO_BATHROOM]: 43100,
         }
     },
     {
         type: priceTypeEnum.SHOWER_SCREEN,
         prices: {
             [priceTypeEnum.ONE_ROOM]: 5000,
+            [priceTypeEnum.TWO_ROOM_ONE_BATHROOM_SMALL]: 5000,
             [priceTypeEnum.TWO_ROOM_ONE_BATHROOM]: 5000,
             [priceTypeEnum.THREE_ROOM_ONE_BATHROOM]: 5000,
             [priceTypeEnum.THREE_ROOM_TWO_BATHROOM]: 10000,
+            [priceTypeEnum.THREE_ROOM_TWO_BATHROOM_LARGE]: 10000,
+            [priceTypeEnum.FOUR_ROOM_TWO_BATHROOM]: 10000,
         }
     },
     {
         type: priceTypeEnum.ELECTRICAL,
         prices: {
             [priceTypeEnum.ONE_ROOM]: 48000,
+            [priceTypeEnum.TWO_ROOM_ONE_BATHROOM_SMALL]: 54000,
             [priceTypeEnum.TWO_ROOM_ONE_BATHROOM]: 60000,
             [priceTypeEnum.THREE_ROOM_ONE_BATHROOM]: 81000,
             [priceTypeEnum.THREE_ROOM_TWO_BATHROOM]: 81000,
+            [priceTypeEnum.THREE_ROOM_TWO_BATHROOM_LARGE]: 99700,
+            [priceTypeEnum.FOUR_ROOM_TWO_BATHROOM]: 124600,
         }
     },
     {
         type: priceTypeEnum.PIPING,
         prices: {
             [priceTypeEnum.ONE_ROOM]: 31000,
+            [priceTypeEnum.TWO_ROOM_ONE_BATHROOM_SMALL]: 31000,
             [priceTypeEnum.TWO_ROOM_ONE_BATHROOM]: 31000,
             [priceTypeEnum.THREE_ROOM_ONE_BATHROOM]: 31000,
             [priceTypeEnum.THREE_ROOM_TWO_BATHROOM]: 46000,
+            [priceTypeEnum.THREE_ROOM_TWO_BATHROOM_LARGE]: 46000,
+            [priceTypeEnum.FOUR_ROOM_TWO_BATHROOM]: 57500,
         }
     },
     {
         type: priceTypeEnum.FURNITURE_LIVING_ROOM,
         prices: {
             [priceTypeEnum.ONE_ROOM]: 26000,
+            [priceTypeEnum.TWO_ROOM_ONE_BATHROOM_SMALL]: 26000,
             [priceTypeEnum.TWO_ROOM_ONE_BATHROOM]: 26000,
             [priceTypeEnum.THREE_ROOM_ONE_BATHROOM]: 38000,
             [priceTypeEnum.THREE_ROOM_TWO_BATHROOM]: 38000,
+            [priceTypeEnum.THREE_ROOM_TWO_BATHROOM_LARGE]: 46800,
+            [priceTypeEnum.FOUR_ROOM_TWO_BATHROOM]: 58500,
         }
     },
     {
         type: priceTypeEnum.FURNITURE_BATHROOM,
         prices: {
             [priceTypeEnum.ONE_ROOM]: 25000,
+            [priceTypeEnum.TWO_ROOM_ONE_BATHROOM_SMALL]: 25000,
             [priceTypeEnum.TWO_ROOM_ONE_BATHROOM]: 25000,
             [priceTypeEnum.THREE_ROOM_ONE_BATHROOM]: 25000,
             [priceTypeEnum.THREE_ROOM_TWO_BATHROOM]: 25000,
+            [priceTypeEnum.THREE_ROOM_TWO_BATHROOM_LARGE]: 25000,
+            [priceTypeEnum.FOUR_ROOM_TWO_BATHROOM]: 31300,
         }
     },
     {
         type: priceTypeEnum.FURNITURE_BEDROOM,
         prices: {
-            [priceTypeEnum.ONE_ROOM]: 28000,
+            [priceTypeEnum.ONE_ROOM]: 0,
+            [priceTypeEnum.TWO_ROOM_ONE_BATHROOM_SMALL]: 28000,
             [priceTypeEnum.TWO_ROOM_ONE_BATHROOM]: 28000,
-            [priceTypeEnum.THREE_ROOM_ONE_BATHROOM]: 28000 * 2,
-            [priceTypeEnum.THREE_ROOM_TWO_BATHROOM]: 28000 * 2,
+            [priceTypeEnum.THREE_ROOM_ONE_BATHROOM]: 28000,
+            [priceTypeEnum.THREE_ROOM_TWO_BATHROOM]: 28000,
+            [priceTypeEnum.THREE_ROOM_TWO_BATHROOM_LARGE]: 28000,
+            [priceTypeEnum.FOUR_ROOM_TWO_BATHROOM]: 35000,
         }
     },
     {
         type: priceTypeEnum.FURNITURE_KITCHEN,
         prices: {
             [priceTypeEnum.ONE_ROOM]: 48000,
+            [priceTypeEnum.TWO_ROOM_ONE_BATHROOM_SMALL]: 48000,
             [priceTypeEnum.TWO_ROOM_ONE_BATHROOM]: 48000,
             [priceTypeEnum.THREE_ROOM_ONE_BATHROOM]: 59000,
             [priceTypeEnum.THREE_ROOM_TWO_BATHROOM]: 59000,
+            [priceTypeEnum.THREE_ROOM_TWO_BATHROOM_LARGE]: 72600,
+            [priceTypeEnum.FOUR_ROOM_TWO_BATHROOM]: 90800,
         }
     },
     {
         type: priceTypeEnum.FURNITURE_MASTER_BATHROOM,
         prices: {
             [priceTypeEnum.ONE_ROOM]: 25000,
+            [priceTypeEnum.TWO_ROOM_ONE_BATHROOM_SMALL]: 25000,
             [priceTypeEnum.TWO_ROOM_ONE_BATHROOM]: 25000,
             [priceTypeEnum.THREE_ROOM_ONE_BATHROOM]: 25000,
             [priceTypeEnum.THREE_ROOM_TWO_BATHROOM]: 25000,
+            [priceTypeEnum.THREE_ROOM_TWO_BATHROOM_LARGE]: 25000,
+            [priceTypeEnum.FOUR_ROOM_TWO_BATHROOM]: 31300,
         }
     },
     {
         type: priceTypeEnum.FURNITURE_MASTER_BEDROOM,
         prices: {
             [priceTypeEnum.ONE_ROOM]: 35000,
+            [priceTypeEnum.TWO_ROOM_ONE_BATHROOM_SMALL]: 35000,
             [priceTypeEnum.TWO_ROOM_ONE_BATHROOM]: 35000,
             [priceTypeEnum.THREE_ROOM_ONE_BATHROOM]: 35000,
             [priceTypeEnum.THREE_ROOM_TWO_BATHROOM]: 35000,
+            [priceTypeEnum.THREE_ROOM_TWO_BATHROOM_LARGE]: 35000,
+            [priceTypeEnum.FOUR_ROOM_TWO_BATHROOM]: 43800,
         }
     },
   ];

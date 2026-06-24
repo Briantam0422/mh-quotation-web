@@ -14,6 +14,7 @@ export interface Option {
   id: number;
   type: string;
   name: string;
+  disabled?: number[];
 }
 
 const Options = (props: OptionsPros) => {

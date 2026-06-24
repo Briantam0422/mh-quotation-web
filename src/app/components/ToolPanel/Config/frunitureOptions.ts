@@ -20,16 +20,30 @@ export const frunitureOptions = [
   {
     id: 4,
     type: priceTypeEnum.FURNITURE_BEDROOM,
-    name: '睡房',
+    name: '睡房1',
+    disabled: [1]
   },
   {
     id: 5,
-    type: priceTypeEnum.FURNITURE_BATHROOM,
-    name: '廁所',
+    type: priceTypeEnum.FURNITURE_BEDROOM,
+    name: '睡房2',
+    disabled: [1,2,3]
   },
   {
     id: 6,
-    type: priceTypeEnum.FURNITURE_BATHROOM,
+    type: priceTypeEnum.FURNITURE_BEDROOM,
+    name: '睡房3',
+    disabled: [1,2,3,4,5,6]
+  },
+  {
+    id: 7,
+    type: priceTypeEnum.FURNITURE_MASTER_BATHROOM,
     name: '主廁',
+  },
+  {
+    id: 8,
+    type: priceTypeEnum.FURNITURE_BATHROOM,
+    name: '廁所1',
+    disabled: [1,2,3,4]
   }
 ];

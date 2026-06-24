@@ -14,7 +14,8 @@ interface ItemListProps {
 }
 const ItemList = (props: ItemListProps) => {
   const { items, currentValue, field, type } = props;
-  const { setFieldValue } = useFormikContext<FormValues>();
+  const { setFieldValue, values } = useFormikContext<FormValues>();
+  const selectedSizeId = values.sizeOptions[0]?.id;
 
   return (
     <Row gutter={[10, 10]}>
@@ -24,6 +25,9 @@ const ItemList = (props: ItemListProps) => {
             <Card
               variant="borderless"
               onClick={() => {
+                const isDisabled = item.disabled?.includes(selectedSizeId) ?? false;
+                if (isDisabled) return;
+
                 if (type === OptionType.SINGLE) {
                   setFieldValue(field, []);
                   setFieldValue(field, [item]);
@@ -48,6 +52,7 @@ const ItemList = (props: ItemListProps) => {
               <Checkbox
                 key={item.id}
                 checked={currentValue.some((currentValueItem) => currentValueItem.id === item.id)}
+                disabled={item.disabled?.includes(selectedSizeId) ?? false}
               >
                 <p className="w-full">{item.name}</p>
               </Checkbox>

@@ -3,7 +3,5 @@ export const calculateRoundPrice = (price: number, margin: number) => {
 }
 
 export const formatPrice = (price: number) => {
-    return Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 0 })
-    .format(price)
-    .toLowerCase();
+    return `${Math.round(price / 1000)}k`;
 }
